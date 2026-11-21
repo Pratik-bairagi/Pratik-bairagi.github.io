@@ -3,15 +3,15 @@
 // One shared list for desktop and phone
 const subjectTags = [
   // DBMS
-  'DBMS', 'SQL', 'Normalization', 'ER Model', 'Transactions', 'Indexing',
+  'DBMS', 'SQL', 
   // COA
-  'COA', 'Pipelining', 'Cache Memory', 'Instruction Set', 'ALU',
+  'COA',
   // OS
-  'OS', 'Scheduling', 'Deadlock', 'Paging', 'Virtual Memory', 'Semaphores',
+  'OS', 'Scheduling', 'Virtual Memory',
   // ML
-  'ML', 'Regression', 'Neural Networks', 'Clustering', 'Decision Trees',
+  'ML', 'AI', 'Neural Networks',
   // Quantum Computing
-  'Quantum Computing', 'Qubits', 'Superposition', 'Entanglement', 'Quantum Gates', "Shor's Algorithm"
+  'Quantum Computing', 'Qubits', 'Superposition', 'Entanglement'
 ];
 
 var colors = ['#34A853', '#FBBC05', '#4285F4', '#7FBC00', '#FFBA01', '#01A6F0'];
