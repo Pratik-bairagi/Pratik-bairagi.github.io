@@ -213,6 +213,35 @@
       background: #7FBC00;
       transform: translateY(-2px);
     }
+
+    /* Blog cards: centered 3-column grid, no overflow */
+    .section6 { overflow-x: hidden !important; }
+    .section6 .cards-wrapper {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 330px)) !important;
+      justify-content: center !important;
+      gap: 40px !important;
+      width: 100% !important;
+      max-width: 1100px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
+      box-sizing: border-box !important;
+    }
+    .section6 .card-grid-space {
+      width: 100% !important;
+      max-width: 330px !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+    .section6 .card { width: 100% !important; box-sizing: border-box !important; }
+
+    /* Center My Work Experience title */
+    .section5 .mywork {
+      display: block !important;
+      text-align: center !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
   </style>
 </head>
 
@@ -497,12 +526,6 @@
       </div>
     </div>
 
-    <div data-aos="fade-right" data-aos-once="true" class="learn_more">
-      <div class="learn_btn">
-          <a href="#work" target="_self" class="buttonLearn">Learn More</a>
-      </div>
-   </div>
-
     <div class="resume_center">
       <a href="assets/Resume.pdf" target="_blank" download>
         <span>Download Resume</span> <i class="fas fa-download" aria-hidden="true"></i>
@@ -617,11 +640,6 @@
       </div>
 
     </div>
-    <div data-aos="fade-right" data-aos-once="true" class="read_more">
-      <div class="read_btn">
-          <a href="#blogs" target="_self" class="buttonRead">Read More</a>     
-      </div>
-   </div>
   </div>
 
   <div class="section7" id="contact">
@@ -720,12 +738,6 @@
       </ul>
     </div>
 </div>
- <div data-aos="fade-right" data-aos-once="true" class="download_cv">
-    <p class="downloadcv_text">Download my Resume here</p>
-    <div class="download_btn">
-        <a href="assets/Resume.pdf" target="_blank" class="buttonDownload" download>Download</a>
-    </div>
- </div>
   </div>
 
   </div>
