@@ -264,6 +264,61 @@
       padding: 0 0 8px !important;
       border-bottom: 5px solid currentColor !important;
     }
+
+    /* Study material cards: 4 per row on desktop */
+    .section6 .cards-wrapper {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      max-width: 1250px !important;
+      gap: 28px !important;
+    }
+    .section6 .card-grid-space { max-width: 290px !important; }
+    .section6 .card { min-height: 270px !important; }
+    .section6 .card h1 { font-size: 1.1rem !important; }
+    @media (max-width: 1100px) {
+      .section6 .cards-wrapper { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+    @media (max-width: 640px) {
+      .section6 .cards-wrapper { grid-template-columns: minmax(0, 1fr) !important; }
+    }
+
+    /* Notes search + subject filter */
+    .notes-toolbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 10px auto 30px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    #notes-search {
+      width: 100%;
+      max-width: 420px;
+      padding: 11px 20px;
+      border: 2px solid #34A853;
+      border-radius: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      box-sizing: border-box;
+    }
+    #notes-search:focus { border-color: #4285F4; }
+    .notes-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .notes-filters button {
+      padding: 6px 18px;
+      border: 2px solid #34A853;
+      border-radius: 20px;
+      background: #fff;
+      color: #34A853;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+    .notes-filters button:hover,
+    .notes-filters button.active { background: #34A853; color: #fff; }
+    .notes-count { margin: 0; font-size: 0.85rem; color: #777; font-family: 'Poppins', sans-serif; }
   </style>
 </head>
 
@@ -577,91 +632,16 @@
     <div data-aos="fade-right" data-aos-duration="700" data-aos-once="true" class="blogs">
       <span class="text-wrapper">
         <span class="line line1"></span>
-        <span class="letters">Blogs</span>
+        <span class="letters">Study Material</span>
       </span>
     </div>
 
-    <div class="cards-wrapper">
-      
-      <div data-aos="fade-right" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--XHaJcGyA--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jksw6fr46e8ieuafqy0y.png')">
-          <div>
-            <h1>Biggest underrated resources for programmers</h1>
-            <p>When learning CS, there are some useful sites you must know…</p>
-            <div class="tags">
-              <div class="tag">#coding</div>
-              <div class="tag">#resources</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div data-aos="fade-down" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--LaKv9vTT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1bphaogg153kt0o5f0x5.jpg')">
-          <div>
-            <h1>3 Ways to restore your deleted files</h1>
-            <p>We're talking about accidentally deleting important files …</p>
-            <div class="tags">
-              <div class="tag">#backup</div>
-              <div class="tag">#windows</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-once="true"  class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--6oNTZ-pM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6yqdaskx5u05oozot0d2.jpg')">
-          <div>
-            <h1>How to setup a clean laptop</h1>
-            <p>Alright so, last week I had to wipe this laptop…</p>
-            <div class="tags">
-              <div class="tag">#ui</div>
-              <div class="tag">#windows</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div data-aos="fade-left" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--ReJptHiH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d8eo1zzcwdnapkx8o3te.png')">
-          <div>
-            <h1>Animated text sphere in JavaScript using TagCloud.js</h1>
-            <p>I needed a sphere of rotating words for one of my projects…</p>
-            <div class="tags">
-              <div class="tag">#javascript</div>
-              <div class="tag">#webdev</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--P3vlL3Ax--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y28jmywztful8o7gzup5.png')">
-          <div>
-            <h1>How to add a Pre-loader in your webpage</h1>
-            <p>Essentially, pre-loaders (also known as loaders) are…</p>
-            <div class="tags">
-              <div class="tag">#javascript</div>
-              <div class="tag">#webdev</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div data-aos="fade-left" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
-        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--eYQRoQ7a--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2xeo8xi5c9si2mssh963.jpg')">
-          <div>
-            <h1>Better Performance Tips for Gaming Laptops</h1>
-            <p>Over the past few years, gaming laptops have become cheaper…</p>
-            <div class="tags">
-              <div class="tag">#gaming</div>
-              <div class="tag">#windows</div>
-            </div>
-          </div>
-        </a>
-      </div>
-
+    <div class="notes-toolbar">
+      <input type="search" id="notes-search" placeholder="Search notes by title or topic..." aria-label="Search notes">
+      <div class="notes-filters" id="notes-filters"></div>
+      <p class="notes-count" id="notes-count"></p>
     </div>
+    <div class="cards-wrapper" id="notes-grid"></div>
   </div>
 
   <div class="section7" id="contact">
@@ -782,6 +762,77 @@
   <script src="assets/js/section5.js"></script>
   <script src="assets/js/section6.js"></script>
   <script src="assets/js/section7.js"></script>
+  <script src="assets/js/notes.js"></script>
+  <script>
+    // Builds the study-material cards from NOTES (assets/js/notes.js) with search + subject filter
+    (function () {
+      var grid = document.getElementById('notes-grid');
+      var box = document.getElementById('notes-search');
+      var bar = document.getElementById('notes-filters');
+      var count = document.getElementById('notes-count');
+      if (!grid || typeof NOTES === 'undefined') return;
+
+      var active = 'All';
+      var subjects = ['All'];
+      NOTES.forEach(function (n) {
+        n.subject = n.subject || (n.tags && n.tags[0]) || 'General';
+        if (subjects.indexOf(n.subject) < 0) subjects.push(n.subject);
+      });
+
+      function card(n) {
+        var wrap = document.createElement('div');
+        wrap.className = 'card-grid-space';
+        var a = document.createElement('a');
+        a.className = 'card';
+        a.href = n.file;
+        a.target = '_blank';
+        if (n.file && n.file.indexOf('http') !== 0) a.setAttribute('download', '');
+        if (n.image) a.style.setProperty('--bg-img', "url('" + n.image + "')");
+        var inner = document.createElement('div');
+        var h = document.createElement('h1'); h.textContent = n.title;
+        var p = document.createElement('p'); p.textContent = n.desc || '';
+        var tags = document.createElement('div'); tags.className = 'tags';
+        (n.tags || []).forEach(function (t) {
+          var d = document.createElement('div'); d.className = 'tag'; d.textContent = '#' + t;
+          tags.appendChild(d);
+        });
+        inner.appendChild(h); inner.appendChild(p); inner.appendChild(tags);
+        a.appendChild(inner); wrap.appendChild(a);
+        return wrap;
+      }
+
+      function render() {
+        var q = box.value.trim().toLowerCase();
+        var list = NOTES.filter(function (n) {
+          var text = (n.title + ' ' + (n.desc || '') + ' ' + (n.tags || []).join(' ') + ' ' + n.subject).toLowerCase();
+          return (active === 'All' || n.subject === active) && text.indexOf(q) > -1;
+        });
+        grid.innerHTML = '';
+        if (!list.length) {
+          grid.innerHTML = '<p style="text-align:center;grid-column:1/-1">No notes found.</p>';
+        } else {
+          list.forEach(function (n) { grid.appendChild(card(n)); });
+        }
+        count.textContent = list.length + (list.length === 1 ? ' note' : ' notes');
+      }
+
+      subjects.forEach(function (s) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = s;
+        if (s === 'All') b.className = 'active';
+        b.addEventListener('click', function () {
+          active = s;
+          Array.prototype.forEach.call(bar.children, function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          render();
+        });
+        bar.appendChild(b);
+      });
+      box.addEventListener('input', render);
+      render();
+    })();
+  </script>
 </body>
 
 </html>
