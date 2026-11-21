@@ -1,428 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206103165-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    gtag('config', 'UA-206103165-1');
+  </script>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  
+  <link rel="stylesheet" href="assets/css/cursor.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/section1.css">
+  <link rel="stylesheet" href="assets/css/section2.css">
+  <link rel="stylesheet" href="assets/css/section3.css">
+  <link rel="stylesheet" href="assets/css/section4.css">
+  <link rel="stylesheet" href="assets/css/section5.css">
+  <link rel="stylesheet" href="assets/css/section6.css">
+  <link rel="stylesheet" href="assets/css/section7.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  
+  <script src="https://kit.fontawesome.com/5c099e467f.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Pratik Bairagi - Portfolio</title>
 
-    <title>Pratik Bairagi | CS360</title>
+  <style>
+    /* Smooth scrolling between sections (single page) */
+    html { scroll-behavior: smooth; }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    /* Hide the mobile menu burger entirely */
+    @media (max-width: 768px) {
+      .nav_box .burger, #click { display: none !important; }
+      
+      /* Prevents "My Work Experience" from getting cut off on mobile */
+      .mywork {
+        font-size: 32px !important; 
+        text-align: center !important; 
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+      }
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    /* Navbar Container */
+    .nav_box {
+      display: flex !important; 
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 15px 40px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* SOLID LOGO FIX: Stops navbar.css from hiding or moving the logo */
+    .nav_box .logo, 
+    .nav_box .logo a { 
+      display: flex !important;
+      align-items: center !important;
+      position: static !important; 
+      margin: 0 !important; 
+      padding: 0 !important;
+      transform: none !important; 
+      left: auto !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .nav_box .logo img { 
+      display: block !important; 
+      height: 45px !important; 
+      width: auto !important; 
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Keep the Resume button and links styled */
+    .nav_box .nav_links { 
+      display: flex !important;
+      align-items: center !important;
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      gap: 20px !important;
+    }
     
-TemplateMo 562 Space Dynamic
+    .nav_box .nav_links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: inherit;
+    }
 
-https://templatemo.com/tm-562-space-dynamic
+    .nav_box .nav_links a.buttonDownload { 
+      display: inline-flex !important; 
+      align-items: center !important; 
+      gap: 8px !important; 
+      font-weight: 600 !important;
+    }
 
--->
-  </head>
+    /* SECTION 3 & 4 FIX: Justify Paragraph & Add Right Margin */
+    .para_aboutme p.description, 
+    .para_aboutme p.description_phone,
+    .para_myskills p.description_skills {
+      text-align: justify !important;
+    }
+    
+    .para_aboutme p.description, 
+    .para_aboutme p.description_phone {
+      margin-right: 30px !important;
+    }
+
+    /* SECTION 4 FIX: Prevents text cut-off */
+    .content4, .para_myskills {
+      height: auto !important;
+      overflow: visible !important;
+      min-height: min-content !important;
+    }
+    .para_myskills p.description_skills {
+      padding-bottom: 20px !important;
+    }
+  </style>
+</head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
+  <div class="cursor-dot-outline"></div>
+  <div class="cursor-dot"></div>
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <h4>Pratik Bairagi<span>CS360</span></h4>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
+    <!-- Top bar with logo and resume download button -->
+    <nav class="nav_box" data-aos="fade-down" data-aos-duration="700">
+      <div class="logo">
+        <a href="#"><img src="assets/images/logo.png" alt="Portfolio Logo"></a>
       </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+      <input type="checkbox" id="click">
+      <label for="click" class="burger">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </label>
+      <div class="nav_links">
+       <a href="#about">About</a>
+       <a href="#skills">Skills</a>
+       <a href="#work">Experience</a>
+       <a href="#blogs">Blogs</a>
+       <a href="#contact">Contact</a>
+       <a href="assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
+          <span>Resume</span> <i class="fas fa-download" aria-hidden="true"></i> 
+        </a>
+      </div>
+    </nav>
 
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <h6>WELCOME TO Pratik Bairagi | CS360</h6>
-                <h2>Master <em>Computer Science</em> <span>With</span> Pratik Bairagi</h2>
-                <p>Join Pratik Bairagi, your dedicated Assistant Professor and Digital Educator. Who simplify complex concepts for serious aspirants, bringing classroom-quality learning and mentorship directly to your screen.<a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
-                <form id="search" action="#" method="GET">
-                  <fieldset>
-                    <input type="address" name="address" class="email" placeholder="Your Queries..." autocomplete="on" required>
-                  </fieldset>
-                  <fieldset>
-                    <button type="submit" class="main-button">Ask</button>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/banner-right-image.png" alt="team meeting">
-              </div>
+    <div class="section1">
+        <div class="animated_title">
+          <div class="text_top">
+            <div>
+              <span class="text-bounce">Hello! I'm Pratik Bairagi,</span>
             </div>
           </div>
+          <div class="text_bottom">
+            <div><span class="text-bounce">I'm an Educator <i class="fas fa-code" aria-hidden="true"></i></span></div>
+          </div>
         </div>
-      </div>
+      
+      <div class="boxes"> 
+      <svg viewBox="0 0 520 460" fill="none">
+        <rect class="bounce-in-right box-bounce" x="272" width="120" height="93" rx="10" fill="#7FBC00" />
+        <rect class="bounce-in-right box-bounce" x="361.5" y="93.5" width="119" height="92" rx="9.5" stroke="#C4C4C4" />
+        <rect class="bounce-in-left box-bounce" x="241" y="93" width="120" height="93" rx="10" fill="#FBBC05" />
+        <rect class="bounce-in-bottom box-bounce" x="301" y="186" width="120" height="93" rx="10" fill="#4285F4" />
+        <rect class="bounce-in-right box-bounce" x="181.5" y="186.5" width="119" height="92" rx="9.5" stroke="#4285F4" />
+        <rect class="bounce-in-left box-bounce" x="61.5" y="186.5" width="119" height="92" rx="9.5" stroke="#C4C4C4" />
+        <rect class="bounce-in-top box-bounce" x="361.5" y="279.5" width="119" height="92" rx="9.5" stroke="#C4C4C4" />
+        <rect class="bounce-in-left box-bounce" x="241" y="279" width="120" height="93" rx="10" fill="#C4C4C4" fill-opacity="0.4" />
+        <rect class="bounce-in-top box-bounce" x="121" y="279" width="120" height="93" rx="10" fill="#F34F1C" />
+        <rect class="bounce-in-bottom box-bounce" x="0.5" y="278.5" width="121" height="94" rx="10.5" stroke="#C4C4C4" />
+        <rect class="bounce-in-bottom box-bounce" x="307.5" y="0.5" width="119" height="92" rx="9.5" stroke="#C4C4C4" />
+      </svg></div>
     </div>
-  </div>
 
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <img src="assets/images/about-left-image.png" alt="person graphic">
-          </div>
-        </div>
-        <div class="col-lg-8 align-self-center">
-          <div class="services">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-01.png" alt="reporting">
-                  </div>
-                  <div class="right-text">
-                    <h4>Video Lectures</h4>
-                    <p>Detailed video tutorials simplifying complex technical topics for better retention.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-02.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Study Resources</h4>
-                    <p>Curated notes, previous year questions (PYQs), and cheat sheets for quick revision.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-03.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Live Interaction</h4>
-                    <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-04.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Career Mentorship</h4>
-                    <p>Personalized roadmaps to guide you from academic studies to a successful professional career.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="section2" data-aos="fade" data-aos-once="true" data-aos-offset="250">
+    <div class="content2">
+      <img class="self_phone bounce-in-bottom1" data-speed="-5" src="assets/images/asmit.png">
+      <svg viewBox="0 0 1400 483" fill="none" class="circles">
+        <circle class="layer" data-speed="9" cx="686.5" cy="261.5" r="151.5" fill="#34A853" />
+        <circle class="layer" data-speed="8" cx="574" cy="355" r="55" fill="#FBBC05" />
+        <circle class="layer" data-speed="7" cx="518" cy="145" r="35" fill="#4285F4" />
+        <circle class="layer" data-speed="6" cx="741" cy="433" r="20" fill="#EA4335" />
+        <circle class="layer" data-speed="5" cx="280" cy="133" r="20" fill="#EA4335" />
+        <circle class="layer" data-speed="4" cx="170" cy="173" r="20" fill="#EA4335" />
+        <circle class="layer" data-speed="3" cx="1005" cy="104" r="12" fill="#34A853" />
+        <circle class="layer" data-speed="2" cx="881" cy="266" r="12" fill="#34A853" />
+        <circle class="layer" data-speed="1" cx="1210" cy="336" r="12" fill="#F34F1C" />
+        <circle class="layer" data-speed="-1" cx="411" cy="217" r="12" fill="#EA4335" />
+        <circle class="layer" data-speed="-2" cx="372" cy="283" r="12" fill="#EA4335" />
+        <circle class="layer" data-speed="-3" cx="225" cy="324" r="12" fill="#01A6F0" />
+        <circle class="layer" data-speed="-4" cx="358" cy="112" r="14" fill="#FBBC05" />
+        <circle class="layer" data-speed="-5" cx="978.5" cy="290.5" r="17.5" fill="#FBBC05" />
+        <circle class="layer" data-speed="-8" cx="277.5" cy="419.5" r="17.5" fill="#FBBC05" />
+        <circle class="layer" data-speed="-9" cx="102.5" cy="373.5" r="17.5" fill="#FBBC05" />
+        <circle class="layer" data-speed="8" cx="343.5" cy="363.5" r="27.5" fill="#7FBC00" />
+        <circle class="layer" data-speed="2" cx="252.5" cy="237.5" r="27.5" fill="#7FBC00" />
+        <circle class="layer" data-speed="3" cx="977.5" cy="201.5" r="27.5" fill="#34A853" />
+        <circle class="layer" data-speed="7" cx="1164.5" cy="261.5" r="27.5" fill="#7FBC00" />
+        <circle class="layer" data-speed="8" cx="1096" cy="195" r="15" fill="#FBBC05" />
+        <circle class="layer" data-speed="6" cx="1222" cy="392" r="15" fill="#FFBA01" />
+        <circle class="layer" data-speed="8" cx="901" cy="133" r="20" fill="#EA4335" />
+        <circle class="layer" data-speed="7" cx="1131" cy="136" r="20" fill="#F34F1C" />
+        <circle class="layer" data-speed="9" cx="1247" cy="221" r="20" fill="#F34F1C" />
+        <circle class="layer" data-speed="4" cx="1028" cy="408" r="16" fill="#4285F4" />
+        <circle class="layer" data-speed="6" cx="1137" cy="376" r="16" fill="#4285F4" />
+        <circle class="layer" data-speed="1" cx="1231" cy="164" r="16" fill="#4285F4" />
+        <circle class="layer" data-speed="-3" cx="439.5" cy="426.5" r="16.5" fill="#01A6F0" />
+        <circle class="layer" data-speed="-5" cx="120.5" cy="264.5" r="16.5" fill="#01A6F0" />
+        <circle class="layer" data-speed="-9" cx="909" cy="395" r="10" fill="#7FBC00" />
+        <circle class="layer" data-speed="-2" cx="328" cy="184" r="16" fill="#4285F4" />
+      </svg>
+      <img class="self layer" data-speed="-5" src="assets/images/asmit.png">
+      <svg viewBox="0 0 355 343" fill="none" class="circles_phone">
+        <circle class="bounce-in-bottom2" cx="203.5" cy="151.5" r="151.5" fill="#34A853" />
+        <circle class="bounce-in-bottom3" cx="91" cy="245" r="55" fill="#FBBC05" />
+        <circle class="bounce-in-bottom4" cx="35" cy="35" r="35" fill="#4285F4" />
+        <circle class="bounce-in-bottom5" cx="258" cy="323" r="20" fill="#EA4335" />
+      </svg>
     </div>
   </div>
 
-  <div id="services" class="our-services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="left-image">
-            <img src="assets/images/services-left-image.png" alt="">
-          </div>
+  <div class="section3" id="about">
+    <div data-aos="fade-left" data-aos-once="true" class="aboutme">
+      <span class="text-wrapper">
+        <span class="letters">About me</span>
+        <span class="line"></span>
+      </span>
+    </div>
+    <div class="content3">  
+      <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="para_aboutme">
+        <p class="hello">Hello!</p>
+        <p class="description"> As an Assistant Professor of Computer Science, 
+          I bridge the gap between complex software architecture and intuitive business logic. 
+          My expertise lies in the intersection of Cloud Systems and Quantum Computing, 
+          where I focus on deconstructing intricate problems into elegant, efficient, and teachable solutions. 
+          I am driven by the belief that great code should be as structured as it is beautiful, 
+          a philosophy I bring to both my research and my students. <span class="code_sym"><i class="fas fa-code" aria-hidden="true"></i></span><br><br>
+          When I am not Teaching, you'll find me exploring new horizons and traveling.
+          <br><br>
+          And these are the Subjects I am familiar with <span><i class="fas fa-arrow-circle-right" aria-hidden="true"></i></span>
+        </p>
+        <p class="description_phone">As an Assistant Professor of Computer Science, 
+          I bridge the gap between complex software architecture and intuitive business logic. 
+          My expertise lies in the intersection of Cloud Systems and Quantum Computing, 
+          where I focus on deconstructing intricate problems into elegant, efficient, and teachable solutions. 
+          I am driven by the belief that great code should be as structured as it is beautiful, 
+          a philosophy I bring to both my research and my students. <span class="code_sym"><i class="fas fa-code" aria-hidden="true"></i></span><br><br>
+          When I am not Teaching, you'll find me exploring new horizons and traveling.
+          <br><br>
+          And these are the Tech I am familiar with <span><i class="fas fa-arrow-circle-down" aria-hidden="true"></i></span>
+        </p>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2300" class="content"></div>
+      <span data-aos="fade-left" data-aos-duration="1100" class="content_phone"></span>
+    </div>
+  </div>
+
+  <div class="section4" id="skills">
+    <div data-aos="fade-right" data-aos-once="true" class="myskills">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters">My Expertise & Skills</span>
+      </span>
+    </div>
+    <div class="content4">
+      <div class="skill_container">
+      <div id="progressbar"></div>
+      <div class="skillbox">
+        <p data-aos="fade-right" data-aos-once="true" class="sk">Teaching & Pedagogy</p>
+        <div class="container" data-aos="fade-right">
+          <div id="fe-bar"></div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="section-heading">
-            <h2>Grow your website with our <em>SEO</em> service &amp; <span>Project</span> Ideas</h2>
-            <p>Space Dynamic HTML5 template is free to use for your website projects. However, you are not permitted to redistribute the template ZIP file on any CSS template collection websites. Please contact us for more information. Thank you for your kind cooperation.</p>
+
+        <p data-aos="fade-right" data-aos-once="true" class="sk">Core Computer Science</p>
+        <div class="container" data-aos="fade-right">
+          <div id="be-bar"></div>
+        </div>
+
+        <p data-aos="fade-right" data-aos-once="true" class="sk">Quantum Computing</p>
+        <div class="container" data-aos="fade-right">
+          <div id="cp-bar"></div>
+        </div>
+
+        <p data-aos="fade-right" data-aos-once="true" class="sk">Cloud Systems</p>
+        <div class="container" data-aos="fade-right">
+          <div id="uiux-bar"></div>
+        </div>
+      </div>
+    </div> 
+    <div data-aos="fade-left" data-aos-duration="1200" data-aos-once="true" class="para_myskills">
+      <p class="description_skills">I am an educator with over 5 years of teaching experience across university, college, and institute levels. I hold an MCA and a BSc degree, and I am proudly UGC NET qualified during my master in first attempt.<br><br>
+        My core passion lies in academia and research. I specialize in breaking down complex technical subjects into digestible knowledge for my students. Beyond the standard computer science curriculum, I am deeply involved in exploring and teaching advanced paradigms like Quantum Computing and Cloud Systems.<br><br>
+        Whether it's inside the classroom or mentoring students for competitive coding, I believe in structured learning and impactful teaching. <i class="fas fa-graduation-cap" aria-hidden="true"></i><br><br>
+        Visit my <a class="myskill_links" href="https://www.linkedin.com/in/pratik-bairagi-443551213" target="_blank">LinkedIn</a> profile for more details or just <a class="myskill_links" href="#contact">contact</a> me.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <div class="section5" id="work">
+    <div class="content5">
+      <div data-aos="fade-right" data-aos-once="true" class="mywork">My Work Experience</div>
+      <div data-aos="fade-up" data-aos-once="true" class="wrapper">
+        <div class="item-bg"></div>
+        <div class="project-slider">
+          <div class="project-slider__wrp swiper-wrapper">
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  Portfolio Website
+                </div>
+                <p class="project__txt">
+                  This project is my own portfolio website which I created using HTML, CSS and JavaScript. I have used
+                  many JavaScript libraries for animation and cool effects.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/logo-bg.png" alt="project">
+                </div>
+              </a>
+            </div>
+
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  Weather App
+                </div>
+                <p class="project__txt">
+                  This is a simple JavaScript project to tell the weather of your current location or the city entered.
+                  It uses OpenWeatherMap and OpenCageData APIs.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/weatherapp.png" alt="project">
+                </div>
+              </a>
+            </div>
+
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  Hulu Clone Project
+                </div>
+                <p class="project__txt">
+                  This is the Hulu Clone Project made from HTML, CSS and JavaScript. This project
+                  consists the front-end part of Hulu website.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/hulu.jpg" alt="project">
+                </div>
+              </a>
+            </div>
+
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  Mini C++ Projects
+                </div>
+                <p class="project__txt">
+                  These are simple C++ projects made with OpenCV library which includes processing images, 
+                  videos, webcam feed, shapes, colors, faces, and vehicle number plates.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/mini-c++.png" alt="project">
+                </div>
+              </a>
+            </div>
+
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  Flappy Bird
+                </div>
+                <p class="project__txt">
+                  This is a simple Flappy Bird game made with Kaboom.js. 
+                  Initially the game was coded on Replit, so checkout that game directly here.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/flappy.jpg" alt="project">
+                </div>
+              </a>
+            </div>
+
+            <div class="project-slider__item swiper-slide">
+              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+                <div class="project__title">
+                  MsgByte - Chat App
+                </div>
+                <p class="project__txt">
+                  Realtime chat app with websockets using HTML, CSS, Node.js, Express and Socket.io with Vanilla JS on the frontend with a custom UI.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/msgbyte.png" alt="project">
+                </div>
+              </a>
+            </div>
+
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="first-bar progress-skill-bar">
-                <h4>Website Analysis</h4>
-                <span>84%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
+
+          <div class="project-slider__ctr">
+
+            <div class="project-slider__arrows">
+              <button class="project-slider__arrow project-slider-prev">
+                <span class="icon-font">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="#icon-arrow-left"></use>
+                  </svg>
+                </span>
+              </button>
+              <button class="project-slider__arrow project-slider-next">
+                <span class="icon-font">
+                  <svg class="icon icon-arrow-right">
+                    <use xlink:href="#icon-arrow-right"></use>
+                  </svg>
+                </span>
+              </button>
             </div>
-            <div class="col-lg-12">
-              <div class="second-bar progress-skill-bar">
-                <h4>SEO Reports</h4>
-                <span>88%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="third-bar progress-skill-bar">
-                <h4>Page Optimizations</h4>
-                <span>94%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
+
+            <div class="project-slider__pagination"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div data-aos="fade-right" data-aos-once="true" class="learn_more">
+      <div class="learn_btn">
+          <a href="#work" target="_self" class="buttonLearn">Learn More</a>
+      </div>
+   </div>
+
+    <svg hidden="hidden">
+      <defs>
+        <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+          <title>arrow-left</title>
+          <path
+            d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+          </path>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+          <title>arrow-right</title>
+          <path
+            d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+          </path>
+        </symbol>
+      </defs>
+    </svg>
   </div>
 
-  <div id="portfolio" class="our-portfolio section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-              <div class="hidden-content">
-                <h4>SEO Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-              <div class="hidden-content">
-                <h4>Website Reporting</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="hidden-content">
-                <h4>Performance Tests</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-              <div class="hidden-content">
-                <h4>Data Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+  <div class="section6" id="blogs">
+  
+    <div data-aos="fade-right" data-aos-duration="700" data-aos-once="true" class="blogs">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters">Blogs</span>
+      </span>
     </div>
-  </div>
 
-  <div id="blog" class="our-blog section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="section-heading">
-            <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="top-dec">
-            <img src="assets/images/blog-dec.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="left-image">
-            <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
-            <div class="info">
-              <div class="inner-content">
-                <ul>
-                  <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
-                  <li><i class="fa fa-users"></i> TemplateMo</li>
-                  <li><i class="fa fa-folder"></i> Branding</li>
-                </ul>
-                <a href="#"><h4>SEO Agency &amp; Digital Marketing</h4></a>
-                <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore magna...</p>
-                <div class="main-blue-button">
-                  <a href="#">Discover More</a>
-                </div>
-              </div>
+    <div class="cards-wrapper">
+      
+      <div data-aos="fade-right" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--XHaJcGyA--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jksw6fr46e8ieuafqy0y.png')">
+          <div>
+            <h1>Biggest underrated resources for programmers</h1>
+            <p>When learning CS, there are some useful sites you must know…</p>
+            <div class="tags">
+              <div class="tag">#coding</div>
+              <div class="tag">#resources</div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="right-list">
-            <ul>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                  <a href="#"><h4>New Websites &amp; Backlinks</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                  <a href="#"><h4>SEO Analysis &amp; Content Ideas</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                  <a href="#"><h4>SEO Tips &amp; Digital Marketing</h4></a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </a>
       </div>
+
+      <div data-aos="fade-down" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--LaKv9vTT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1bphaogg153kt0o5f0x5.jpg')">
+          <div>
+            <h1>3 Ways to restore your deleted files</h1>
+            <p>We're talking about accidentally deleting important files …</p>
+            <div class="tags">
+              <div class="tag">#backup</div>
+              <div class="tag">#windows</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-once="true"  class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--6oNTZ-pM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6yqdaskx5u05oozot0d2.jpg')">
+          <div>
+            <h1>How to setup a clean laptop</h1>
+            <p>Alright so, last week I had to wipe this laptop…</p>
+            <div class="tags">
+              <div class="tag">#ui</div>
+              <div class="tag">#windows</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-left" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--ReJptHiH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d8eo1zzcwdnapkx8o3te.png')">
+          <div>
+            <h1>Animated text sphere in JavaScript using TagCloud.js</h1>
+            <p>I needed a sphere of rotating words for one of my projects…</p>
+            <div class="tags">
+              <div class="tag">#javascript</div>
+              <div class="tag">#webdev</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--P3vlL3Ax--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y28jmywztful8o7gzup5.png')">
+          <div>
+            <h1>How to add a Pre-loader in your webpage</h1>
+            <p>Essentially, pre-loaders (also known as loaders) are…</p>
+            <div class="tags">
+              <div class="tag">#javascript</div>
+              <div class="tag">#webdev</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-left" data-aos-duration="700" data-aos-once="true" class="card-grid-space">
+        <a class="card" href="#" target="_blank" style="--bg-img: url('https://res.cloudinary.com/practicaldev/image/fetch/s--eYQRoQ7a--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2xeo8xi5c9si2mssh963.jpg')">
+          <div>
+            <h1>Better Performance Tips for Gaming Laptops</h1>
+            <p>Over the past few years, gaming laptops have become cheaper…</p>
+            <div class="tags">
+              <div class="tag">#gaming</div>
+              <div class="tag">#windows</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
+    <div data-aos="fade-right" data-aos-once="true" class="read_more">
+      <div class="read_btn">
+          <a href="#blogs" target="_self" class="buttonRead">Read More</a>     
+      </div>
+   </div>
   </div>
 
-  <div id="contact" class="contact-us section">
-    <div class="container">
+  <div class="section7" id="contact">
+
+    <div class="contactme_title" data-aos="fade-left" data-aos-once="true">
+      <span class="text-wrapper">
+        <span class="letters">Contact Me</span>
+        <span class="line"></span>
+      </span>
+    </div>
+
+    <div class="contactme">
+    <div class="container_form">
       <div class="row">
-        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <div class="section-heading">
-            <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p>
-            <div class="phone-info">
-              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+        
+        <div class="contact-info">
+          
+          <div class="contact-info-item" data-aos="fade-right" data-aos-once="true">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p>04 Behind the post office,<br> Gangrar (32901),Chittorgarh,<br>Rajasthan, India</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item" data-aos="fade-right" data-aos-once="true">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>+91 9057613239</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item" data-aos="fade-right" data-aos-once="true">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Email</h4>
+              <p>pratikbairagi702@gmail.com</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-                </fieldset>
-              </div>
+        
+        <div class="contact-form" data-aos="fade-left" data-aos-once="true">
+          <form  id="contact-form" method="POST" action="https://formsubmit.co/pratikbairagi702@gmail.com">
+            <h2>Send a message</h2>
+            <div class="input-box">
+              <input type="text" required="true" name="name" placeholder="Name">
             </div>
-            <div class="contact-dec">
-              <img src="assets/images/contact-decoration.png" alt="">
+            
+            <div class="input-box">
+              <input type="email" required="true" name="email" placeholder="Email">
             </div>
+            
+            <div class="input-box">
+              <textarea required="true" name="message" placeholder="Type your message here..."></textarea>
+            </div>
+            
+            <div class="input-box">
+              <input type="submit" value="Send">
+            </div>
+               <input type="hidden" name="_captcha" value="false">
+               <input type="hidden" name="_template" value="box">
+               <input type="hidden" name="_url" value="https://pratik-bairagi.github.io/Pratik-bairagi/">
           </form>
         </div>
+        
       </div>
     </div>
+  </div>
+
+  <div class="connect_withme">
+
+    <div class="connect_title" data-aos="fade-down" data-aos-once="true">
+      <h2>Connect with me on!!</h2>
+    </div>
+    <div class="connect_wrapper" data-aos="fade-up" data-aos-once="true" data-aos-offset="90">
+      <ul>
+        <li>
+          <a href="https://github.com/Pratik-bairagi" target="_blank"><i class="fab fa-github icon"></i></a>
+        </li>
+        <li>
+          <a href="https://x.com/pratikbairagi07" target="_blank"><i class="fab fa-twitter icon"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/pratik-bairagi-443551213" target="_blank"><i class="fab fa-linkedin icon"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ll_pratik.bairagi_ll?igsh=M29kc2dqODFobGU3" target="_blank"><i class="fab fa-instagram icon"></i></a>
+        </li>
+      </ul>
+    </div>
+</div>
+ <div data-aos="fade-right" data-aos-once="true" class="download_cv">
+    <p class="downloadcv_text">Download my Resume here</p>
+    <div class="download_btn">
+        <a href="assets/Resume.pdf" target="_blank" class="buttonDownload" download>Download</a>
+    </div>
+ </div>
+  </div>
+
   </div>
 
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2021 Space Dynamic Co. All Rights Reserved. 
-          
-          <br>Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
-        </div>
-      </div>
+    <div class="footer_line">
+      <h3>Learn with <i class="fas fa-heart" aria-hidden="true"></i> Pratik Bairagi </h3>
     </div>
   </footer>
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/templatemo-custom.js"></script>
 
+  <script src="assets/js/TagCloud.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/section1.js"></script>
+  <script src="assets/js/section2.js"></script>
+  <script src="assets/js/section3.js"></script>
+  <script src="assets/js/section4.js"></script>
+  <script src="assets/js/section5.js"></script>
+  <script src="assets/js/section6.js"></script>
+  <script src="assets/js/section7.js"></script>
 </body>
 
 </html>
-
