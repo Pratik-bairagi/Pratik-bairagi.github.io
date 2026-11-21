@@ -319,6 +319,14 @@
     .notes-filters button:hover,
     .notes-filters button.active { background: #34A853; color: #fff; }
     .notes-count { margin: 0; font-size: 0.85rem; color: #777; font-family: 'Poppins', sans-serif; }
+
+    /* Cards without an image: coloured background so the white text is visible */
+    .section6 .card.no-img:not(:hover) { background: linear-gradient(135deg, #34A853, #4285F4) !important; }
+    .section6 .card.no-img.c1:not(:hover) { background: linear-gradient(135deg, #4285F4, #01A6F0) !important; }
+    .section6 .card.no-img.c2:not(:hover) { background: linear-gradient(135deg, #F34F1C, #FBBC05) !important; }
+    .section6 .card.no-img.c3:not(:hover) { background: linear-gradient(135deg, #7FBC00, #34A853) !important; }
+    .section6 .card.no-img:not(:hover) h1,
+    .section6 .card.no-img:not(:hover) p { color: #fff !important; }
   </style>
 </head>
 
@@ -788,6 +796,7 @@
         a.target = '_blank';
         if (n.file && n.file.indexOf('http') !== 0) a.setAttribute('download', '');
         if (n.image) a.style.setProperty('--bg-img', "url('" + n.image + "')");
+        else a.classList.add('no-img', 'c' + ((subjects.indexOf(n.subject) - 1) % 4));
         var inner = document.createElement('div');
         var h = document.createElement('h1'); h.textContent = n.title;
         var p = document.createElement('p'); p.textContent = n.desc || '';
