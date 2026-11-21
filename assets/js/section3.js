@@ -5,11 +5,11 @@ const subjectTags = [
   // DBMS
   'DBMS', 'SQL', 
   // COA
-  'COA',
+  'COA', 'C', 'C++', 'JAVA', 'Python',
   // OS
   'OS', 'Scheduling', 'Virtual Memory',
   // ML
-  'ML', 'AI', 'Neural Networks',
+  'ML', 'AI', 'Neural Networks', 'NLP',
   // Quantum Computing
   'Quantum Computing', 'Qubits', 'Superposition', 'Entanglement'
 ];
