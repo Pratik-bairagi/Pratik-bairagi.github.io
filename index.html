@@ -330,6 +330,31 @@
 
     /* Remove the moving yellow highlight behind the active project card */
     .section5 .item-bg { display: none !important; }
+
+    /* My Work Experience title: truly centered, underline under the text only */
+    .section5 .mywork {
+      display: flex !important;
+      justify-content: center !important;
+      align-self: stretch !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+      border: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      float: none !important;
+      text-indent: 0 !important;
+      box-sizing: border-box !important;
+    }
+    .section5 .mywork .mywork_text {
+      display: inline-block;
+      padding-bottom: 8px;
+      border-bottom: 5px solid currentColor;
+    }
+
+    /* Project cards are no longer links */
+    .section5 .project__item { cursor: default !important; text-decoration: none; }
   </style>
 </head>
 
@@ -493,85 +518,100 @@
 
   <div class="section5" id="work">
     <div class="content5">
-      <div data-aos="fade-right" data-aos-once="true" class="mywork">My Work Experience</div>
+      <div data-aos="fade-right" data-aos-once="true" class="mywork"><span class="mywork_text">My Work Experience</span></div>
       <div data-aos="fade-up" data-aos-once="true" class="wrapper">
         <div class="item-bg"></div>
         <div class="project-slider">
           <div class="project-slider__wrp swiper-wrapper">
             <div class="project-slider__item swiper-slide">
-              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+              <div class="project__item">
                 <div class="project__title">
-                  Assistant Professor - Mewar University NAAC 'A' Grade
+                  Portfolio Website
                 </div>
                 <p class="project__txt">
-                  Taught core Computer Science subjects across B.Tech, M.Tech, MCA, BCA, M.Sc., 
-                  and B.Sc. programs, mentoring students through practical labs, software projects, and exam preparation.
+                  This project is my own portfolio website which I created using HTML, CSS and JavaScript. I have used
+                  many JavaScript libraries for animation and cool effects.
                 </p>
                 <div class="project__img">
-                  <img src="assets/images/mewar.png" alt="project">
+                  <img src="assets/images/logo-bg.png" alt="project">
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="project-slider__item swiper-slide">
-              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+              <div class="project__item">
                 <div class="project__title">
-                  Assistant Professor - RNT Group of Colleges AICTE Approved
+                  Weather App
                 </div>
                 <p class="project__txt">
-                  Empowering rural-area BCA, MCA, and B.Sc. students with accessible Computer Science lectures 
-                  and practical coding labs, while serving as SWAYAM-NPTEL SPOC (LC 7724), NDLI Club Coordinator, and institutional Website Administrator.
+                  This is a simple JavaScript project to tell the weather of your current location or the city entered.
+                  It uses OpenWeatherMap and OpenCageData APIs.
                 </p>
                 <div class="project__img">
-                  <img src="assets/images/rnt.jpg" alt="project">
+                  <img src="assets/images/weatherapp.png" alt="project">
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="project-slider__item swiper-slide">
-              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+              <div class="project__item">
                 <div class="project__title">
-                  SPOC - NPTEL, LC ID 7724 RNT PG College
+                  Hulu Clone Project
                 </div>
                 <p class="project__txt">
-                  Spearheaded institutional adoption of SWAYAM-NPTEL courses, organizing campus awareness drives 
-                  and guiding students and faculty through national certification programs.
+                  This is the Hulu Clone Project made from HTML, CSS and JavaScript. This project
+                  consists the front-end part of Hulu website.
                 </p>
                 <div class="project__img">
-                  <img src="assets/images/NPTEL.jpg" alt="project">
+                  <img src="assets/images/hulu.jpg" alt="project">
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="project-slider__item swiper-slide">
-              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+              <div class="project__item">
                 <div class="project__title">
-                  Publication : DOI: 10.58257/IJPREMS42668 Impact Factor: 7.001
+                  Mini C++ Projects
                 </div>
                 <p class="project__txt">
-                  Bairagi, P. (2025). Quantum Superposition and Advaita Vedanta: Bridging Quantum Computing with Non-Dual Indian
-                  Philosophy. International Journal of Progressive Research in Engineering Management and Science (IJPREMS), Vol. 05, Issue 06
+                  These are simple C++ projects made with OpenCV library which includes processing images, 
+                  videos, webcam feed, shapes, colors, faces, and vehicle number plates.
                 </p>
                 <div class="project__img">
-                  <img src="assets/images/IJPREMS.png" alt="project">
+                  <img src="assets/images/mini-c++.png" alt="project">
                 </div>
-              </a>
+              </div>
             </div>
 
             <div class="project-slider__item swiper-slide">
-              <a href="https://github.com/Pratik-bairagi" target="_blank" class="project__item">
+              <div class="project__item">
                 <div class="project__title">
-                  Publication : 8085 Microprocessor Lab Manual ISBN-13: 979-8196613135
+                  Flappy Bird
                 </div>
                 <p class="project__txt">
-                  Master the 8085 Microprocessor with Hands-On Assembly Language Programming! Bridging the gap 
-                  between theoretical computer architecture and practical execution.
+                  This is a simple Flappy Bird game made with Kaboom.js. 
+                  Initially the game was coded on Replit, so checkout that game directly here.
                 </p>
                 <div class="project__img">
-                  <img src="assets/images/8085 Book.png" alt="project">
+                  <img src="assets/images/flappy.jpg" alt="project">
                 </div>
-              </a>
+              </div>
             </div>
+
+            <div class="project-slider__item swiper-slide">
+              <div class="project__item">
+                <div class="project__title">
+                  MsgByte - Chat App
+                </div>
+                <p class="project__txt">
+                  Realtime chat app with websockets using HTML, CSS, Node.js, Express and Socket.io with Vanilla JS on the frontend with a custom UI.
+                </p>
+                <div class="project__img">
+                  <img src="assets/images/msgbyte.png" alt="project">
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <div class="project-slider__ctr">
